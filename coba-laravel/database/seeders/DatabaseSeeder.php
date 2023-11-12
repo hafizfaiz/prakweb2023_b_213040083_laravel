@@ -13,29 +13,33 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
-
+        
         // User::create([
         //     'name' => 'Sandhika Galih',
         //     'email' => 'sandhika@gmail.com',
         //     'password' => bcrypt('12345')
         // ]);
-
         // User::create([
         //     'name' => 'Doddy Ferdiansyah',
         //     'email' => 'doddy@gmail.com',
         //     'password' => bcrypt('12345')
         // ]);
-
         User::factory(3)->create();
-
         Category::create([
             'name' => 'Web Programming',
-            'slug' => 'personal'
+            'slug' => 'web-programming'
         ]);
 
-        Post::factory(20)->create();
+        Category::create([
+            'name' => 'Web Design',
+            'slug' => 'web-design'
+        ]);
 
+        Category::create([
+            'name' => 'Personal',
+            'slug' => 'personal'
+        ]);
+        Post::factory(20)->create();
         // Post::create([
         //     'title' => 'Judul Pertama',
         //     'slug' => 'judul-pertama',
@@ -44,7 +48,6 @@ class DatabaseSeeder extends Seeder
         //     'category_id' =>1,
         //     'user_id' =>1
         // ]);
-
         // Post::create([
         //     'title' => 'Judul Ke Dua',
         //     'slug' => 'judul-ke-dua',
@@ -53,7 +56,6 @@ class DatabaseSeeder extends Seeder
         //     'category_id' =>1,
         //     'user_id' =>1
         // ]);
-
         // Post::create([
         //     'title' => 'Judul Ke Tiga',
         //     'slug' => 'judul-ke-tiga',
@@ -62,7 +64,6 @@ class DatabaseSeeder extends Seeder
         //     'category_id' =>2,
         //     'user_id' =>1
         // ]);
-
         // Post::create([
         //     'title' => 'Judul Ke Empat',
         //     'slug' => 'judul-ke-empat',
